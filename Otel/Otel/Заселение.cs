@@ -31,7 +31,9 @@ namespace Otel
 
         private async void Заселение_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\312\Интерфейсы\Otel\Otel\Database.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;"
++@"AttachDbFilename=C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\NewDatabase.mdf;"+
+@"Integrated Security=True";
 
             sqlConnection = new SqlConnection(connectionString);
 
