@@ -14,10 +14,9 @@ namespace Otel
         [STAThread]
         static void Main()
         {
-           // Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Авторизация());
-            //return 0;
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Авторизация());
         }
     }
 }

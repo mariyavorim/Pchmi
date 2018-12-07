@@ -1,74 +1,19 @@
-C:\312\Интерфейсы\Otel\Otel\bin\Debug\Otel.exe.config
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.csprojResolveAssemblyReference.cache
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.Client_database.resources
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.Form1.resources
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.Properties.Resources.resources
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.room_database.resources
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.zacelenie.resources
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.bron.resources
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.Техперсонал.resources
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.csproj.GenerateResource.Cache
-C:\312\Интерфейсы\Otel\Otel\bin\Debug\Database.mdf
-C:\312\Интерфейсы\Otel\Otel\bin\Debug\Database_log.ldf
-C:\312\Интерфейсы\Otel\Otel\bin\Debug\Otel.exe
-C:\312\Интерфейсы\Otel\Otel\bin\Debug\Otel.pdb
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.exe
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.pdb
-C:\312\Интерфейсы\Otel\Otel\obj\Debug\Otel.start.resources
-C:\Users\1\Desktop\Otel\Otel\bin\Debug\Otel.exe.config
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.exe
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.pdb
-C:\Users\1\Desktop\Otel\Otel\bin\Debug\Database.mdf
-C:\Users\1\Desktop\Otel\Otel\bin\Debug\Database_log.ldf
-C:\Users\1\Desktop\Otel\Otel\bin\Debug\Otel.exe
-C:\Users\1\Desktop\Otel\Otel\bin\Debug\Otel.pdb
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.csprojResolveAssemblyReference.cache
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.Client_database.resources
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.Form1.resources
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.Properties.Resources.resources
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.room_database.resources
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.zacelenie.resources
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.start.resources
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.bron.resources
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.Техперсонал.resources
-C:\Users\1\Desktop\Otel\Otel\obj\Debug\Otel.csproj.GenerateResource.Cache
-<<<<<<< HEAD
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\Database.mdf
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\Database_log.ldf
+C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\NewDatabase.mdf
+C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\NewDatabase_log.ldf
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\Otel.exe.config
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\Otel.exe
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\Otel.pdb
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.csprojAssemblyReference.cache
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Client_database.resources
-C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Form1.resources
+C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Авторизация.resources
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Properties.Resources.resources
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.room_database.resources
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.zacelenie.resources
-C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.start.resources
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.bron.resources
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Техперсонал.resources
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.csproj.GenerateResource.cache
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.csproj.CoreCompileInputs.cache
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.exe
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.pdb
-C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\NewDatabase.mdf
-C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\NewDatabase_log.ldf
-=======
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\Database.mdf
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\Database_log.ldf
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\Otel.exe.config
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\Otel.exe
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\bin\Debug\Otel.pdb
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.csprojResolveAssemblyReference.cache
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Client_database.resources
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Properties.Resources.resources
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.room_database.resources
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.zacelenie.resources
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.bron.resources
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Техперсонал.resources
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.csproj.GenerateResource.Cache
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.csproj.CoreCompileInputs.cache
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.exe
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.pdb
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Авторизация.resources
->>>>>>> 994e2ae4d80a852950383a98faf730ec23937572

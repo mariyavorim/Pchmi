@@ -31,6 +31,7 @@ namespace Otel
 
         private async void Заселение_Load(object sender, EventArgs e)
         {
+            //тут надо будет менять путь к файлу на твой
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;"
 +@"AttachDbFilename=C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\NewDatabase.mdf;"+
 @"Integrated Security=True";
