@@ -268,6 +268,7 @@
             this.ClientSize = new System.Drawing.Size(880, 473);
             this.Controls.Add(this.table_roomDataGridView);
             this.Controls.Add(this.table_roomBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "room_database";
             this.Text = "room_database";
             this.Load += new System.EventHandler(this.room_database_Load);
