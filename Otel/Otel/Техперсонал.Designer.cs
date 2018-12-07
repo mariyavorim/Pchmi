@@ -40,9 +40,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(228, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(108, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(181, 111);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -68,12 +68,14 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(119, 226);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(136, 222);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 32);
+            this.button1.Size = new System.Drawing.Size(120, 50);
             this.button1.TabIndex = 8;
             this.button1.Text = "Уборка выполнена";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Техперсонал
             // 
@@ -85,6 +87,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Техперсонал";
             this.Text = "Техперсонал";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

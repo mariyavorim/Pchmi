@@ -72,11 +72,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Авторизация.cs" />
+    <Compile Include="Авторизация.Designer.cs">
+      <DependentUpon>Авторизация.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,12 +89,6 @@
     </Compile>
     <Compile Include="Заселение.Designer.cs">
       <DependentUpon>Заселение.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Начало.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Начало.Designer.cs">
-      <DependentUpon>Начало.cs</DependentUpon>
     </Compile>
     <Compile Include="Окно администратора.cs">
       <SubType>Form</SubType>
@@ -113,8 +105,8 @@
     <EmbeddedResource Include="Client_database.resx">
       <DependentUpon>Client_database.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Авторизация.resx">
+      <DependentUpon>Авторизация.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,9 +122,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Заселение.resx">
       <DependentUpon>Заселение.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Начало.resx">
-      <DependentUpon>Начало.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Окно администратора.resx">
       <DependentUpon>Окно администратора.cs</DependentUpon>
