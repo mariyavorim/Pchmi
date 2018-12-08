@@ -84,6 +84,18 @@
     <Compile Include="room_database.Designer.cs">
       <DependentUpon>room_database.cs</DependentUpon>
     </Compile>
+    <Compile Include="Апартаменты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Апартаменты.Designer.cs">
+      <DependentUpon>Апартаменты.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Гости.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Гости.Designer.cs">
+      <DependentUpon>Гости.cs</DependentUpon>
+    </Compile>
     <Compile Include="Заселение.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     </Compile>
     <Compile Include="Окно администратора.Designer.cs">
       <DependentUpon>Окно администратора.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Сведения о заселившихся.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Сведения о заселившихся.Designer.cs">
+      <DependentUpon>Сведения о заселившихся.cs</DependentUpon>
     </Compile>
     <Compile Include="Техперсонал.cs">
       <SubType>Form</SubType>
@@ -120,11 +138,20 @@
     <EmbeddedResource Include="room_database.resx">
       <DependentUpon>room_database.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Апартаменты.resx">
+      <DependentUpon>Апартаменты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Гости.resx">
+      <DependentUpon>Гости.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Заселение.resx">
       <DependentUpon>Заселение.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Окно администратора.resx">
       <DependentUpon>Окно администратора.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Сведения о заселившихся.resx">
+      <DependentUpon>Сведения о заселившихся.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Техперсонал.resx">
       <DependentUpon>Техперсонал.cs</DependentUpon>
