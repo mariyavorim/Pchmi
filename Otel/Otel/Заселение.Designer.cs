@@ -53,6 +53,9 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +101,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(639, 21);
             this.textBox5.TabIndex = 30;
+            this.textBox5.Text = "09.12.2018";
             // 
             // label5
             // 
@@ -155,6 +159,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(639, 21);
             this.textBox4.TabIndex = 24;
+            this.textBox4.Text = "08.12.2018";
             // 
             // textBox3
             // 
@@ -183,13 +188,13 @@
             this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(52, 479);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(152, 19);
+            this.label7.Size = new System.Drawing.Size(74, 19);
             this.label7.TabIndex = 34;
-            this.label7.Text = "Состояние номера";
+            this.label7.Text = "Номера:";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(211, 479);
+            this.textBox6.Location = new System.Drawing.Point(40, 527);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(639, 21);
             this.textBox6.TabIndex = 33;
@@ -272,12 +277,41 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "место выдачи:";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(52, 391);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 19);
+            this.label11.TabIndex = 49;
+            this.label11.Text = "Количество";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(211, 389);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(639, 21);
+            this.textBox11.TabIndex = 48;
+            this.textBox11.Text = "1";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(213, 484);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(465, 23);
+            this.comboBox1.TabIndex = 50;
+            // 
             // zacelenie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(909, 593);
+            this.ClientSize = new System.Drawing.Size(909, 598);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.textBox11);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.label12);
@@ -308,6 +342,7 @@
             this.MinimumSize = new System.Drawing.Size(925, 632);
             this.Name = "zacelenie";
             this.Text = "Заселение";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.zacelenie_FormClosing);
             this.Load += new System.EventHandler(this.Заселение_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -341,5 +376,8 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

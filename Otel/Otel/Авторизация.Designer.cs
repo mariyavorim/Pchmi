@@ -114,9 +114,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.FormClosing += Авторизация_FormClosing;
 
         }
 
+  
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;

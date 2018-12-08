@@ -16,6 +16,7 @@ namespace Otel
         public Авторизация()
         {
             InitializeComponent();
+            login.Text = "Администратор";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,7 +35,13 @@ namespace Otel
                 this.Hide();
             }
            
-        }      
+        }
+
+        private void Авторизация_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
 
     }
 }
