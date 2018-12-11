@@ -45,48 +45,99 @@ namespace Otel
                     "WHERE Id = " + id;
 
                 var comm = sqlConnection.CreateCommand();
+                comm.CommandType = CommandType.Text;
                 comm.CommandText = sql;
                 comm.ExecuteNonQuery();
 
+               // var sql2 = $"Select * from Guest WHERE Name =@Nam AND Surname =@Fam AND Patronymic =@Otch";/* +
+               //     $"AND Patronymic =@Otch";*/
+               // comm.CommandText = sql2;
+               // comm.Parameters.Add("@Nam", SqlDbType.NVarChar, 50).Value = tbNaame.Text;
+               // comm.Parameters.Add("@Fam", SqlDbType.NVarChar, 20).Value = tbFam.Text;
+               ////comm.Parameters.Add("@Otch", SqlDbType.NVarChar, 50).Value = tbOt.Text;
+
+               // var reader2 = comm.ExecuteReader();
+               // List<int> ids = new List<int>();
+
+               // while(reader2.Read())
+               // {
+               //     ids.Add((int)reader2["Id"]);
+               // }
+               // reader2.Close();
+               // comm.Parameters.Clear();
+
                 sql = "SELECT * from  Guest"
-                    + $" WHERE Name = {textBox7.Text} AND Surname = {textBox2.Text} AND patromic = {textBox1.Text}";
-
-
+                    + $" WHERE Name =@Nam AND Surname =@Fam ";
+                //  +$"AND Patronymic =@Otch";
+               
+                comm.Parameters.Add("@Nam", SqlDbType.NVarChar, 50).Value = tbNaame.Text;
+                comm.Parameters.Add("@Fam", SqlDbType.NVarChar, 50).Value = tbFam.Text;
+                //comm.Parameters.Add("@Otch", SqlDbType.NVarChar, 50).Value = textBox1.Text;
+                int max_id = 0;
                 comm.CommandText = sql;
                 var reader = comm.ExecuteReader();
+              
+               // reader.Read();
                 int guest_id = -1;
-                if (reader.HasRows)
+                //if (reader.FieldCount>0)
+                //{
+                //    guest_id = reader.GetInt32(0);
+                //    reader.Close();
+                //}
+                if(reader.Read())
                 {
-                    guest_id = reader.GetInt16(0);
+                   // reader.Read();
+                    guest_id = (int)reader["Id"];
+                    reader.Close();
                 }
                 else
                 {
+                    reader.Close();
+                    //sql = " SELECT MAX(ID) FROM GUEST";
+                    //comm.CommandText = sql;
+                    //reader = comm.ExecuteReader();
+                    //reader.Read();
+                    // max_id = reader.GetInt32(0);
+                    //reader.Close();
                     sql =
-                        "INSERT INTO Guest" +
-                        $"Values ( {textBox7.Text},  {textBox2.Text} {textBox1.Text},  { textBox3.Text + textBox8.Text + textBox10.Text + textBox9.Text })";
+                        "INSERT INTO Guest " +
+                        $"Values ('{tbNaame.Text}',  '{tbFam.Text}',' {tbOt.Text}',  '{ textBox3.Text + textBox8.Text + textBox10.Text + textBox9.Text }')";
 
                     comm.CommandText = sql;
-                    comm.ExecuteNonQuery();
+                   int cnt_cols= comm.ExecuteNonQuery();
+                    MessageBox.Show("Вставлено " + cnt_cols);
+
+                    guest_id = max_id + 1;
                 }
 
 
-                sql = "SELECT * from  Guest"
-        + $" WHERE Name = {textBox7.Text} AND Surname = {textBox2.Text} AND patromic = {textBox1.Text}";
+                //sql = " SELECT MAX(ID) FROM accommodation";
+                //comm.CommandText = sql;
+                //reader = comm.ExecuteReader();
+                //reader.Read();
+                //max_id = reader.GetInt32(0);
+                //reader.Close();
 
 
+                sql = "INSERT INTO accommodation " +
+                     $"Values ( {guest_id}, {room}, \'{DateToString( DateTime.Now)}\'," +
+                     $" \'{DateToString(DateTime.Now.AddDays(1))}\' )";
                 comm.CommandText = sql;
-                reader = comm.ExecuteReader();
-                guest_id = -1;
-                if (reader.HasRows)
-                {
-                    guest_id = reader.GetInt16(0);
-                }
+                comm.ExecuteNonQuery();
+
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        string DateToString(DateTime dt)
+        {
+            return
+                $"{dt.Year}-{dt.Month}-{dt.Day} " +
+                $"{dt.Hour}:{dt.Minute}:{dt.Second}";
         }
 
         private async void Заселение_Load(object sender, EventArgs e)
@@ -98,7 +149,6 @@ namespace Otel
             //тут надо будет менять путь к файлу на твой
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;"
 + @"AttachDbFilename=C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\NewDatabase.mdf;" +
-
 @"Integrated Security=True";
 
             sqlConnection = new SqlConnection(connectionString);
@@ -116,6 +166,8 @@ namespace Otel
 
         List<int> room_ids;
         List<int> room_size;
+
+
 
 
         private void button2_Click(object sender, EventArgs e)
@@ -174,7 +226,33 @@ namespace Otel
 
         private void zacelenie_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Form form1 = Application.OpenForms[0];
+            if(!form1.Visible)
+            form1.Show();
+            // Application.Exit();
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Апартаменты апп = new Апартаменты(sqlConnection);
+            апп.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Гости апп = new Гости(sqlConnection);
+            апп.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Сведения_о_заселившихся апп = new Сведения_о_заселившихся(sqlConnection);
+            апп.Show();
         }
     }
 }

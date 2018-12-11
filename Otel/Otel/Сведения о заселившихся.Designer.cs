@@ -45,13 +45,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(805, 680);
+            this.ClientSize = new System.Drawing.Size(805, 685);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximumSize = new System.Drawing.Size(821, 719);
             this.MinimumSize = new System.Drawing.Size(821, 719);
             this.Name = "Сведения_о_заселившихся";
             this.Text = "Сведения_о_заселившихся";
+            this.Load += new System.EventHandler(this.Сведения_о_заселившихся_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
