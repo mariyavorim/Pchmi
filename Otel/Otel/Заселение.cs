@@ -18,23 +18,27 @@ namespace Otel
         public zacelenie()
         {
             InitializeComponent();
+            dtCome.Value = DateTime.Now;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var comm = sqlConnection.CreateCommand();
+            SqlDataReader reader = null;
 
             /*zacelenie zacelenieForm = new zacelenie();
             zacelenieForm.Show();
             this.Close();*/
-
+            DateTime com, leave;
             int id = comboBox1.SelectedIndex;
             if (id == -1)
             {
                 MessageBox.Show("Не выбран номер");
                 return;
             }
-
+            //  if(DateTime.TryParse(text))
+            com = dtCome.Value;
+            leave = dtLeave.Value;
 
             int room = room_ids[id];
 
@@ -44,84 +48,62 @@ namespace Otel
                     "Set isFree = 0 , dateOut=null " +
                     "WHERE Id = " + id;
 
-                var comm = sqlConnection.CreateCommand();
+
                 comm.CommandType = CommandType.Text;
                 comm.CommandText = sql;
                 comm.ExecuteNonQuery();
+                
 
-               // var sql2 = $"Select * from Guest WHERE Name =@Nam AND Surname =@Fam AND Patronymic =@Otch";/* +
-               //     $"AND Patronymic =@Otch";*/
-               // comm.CommandText = sql2;
-               // comm.Parameters.Add("@Nam", SqlDbType.NVarChar, 50).Value = tbNaame.Text;
-               // comm.Parameters.Add("@Fam", SqlDbType.NVarChar, 20).Value = tbFam.Text;
-               ////comm.Parameters.Add("@Otch", SqlDbType.NVarChar, 50).Value = tbOt.Text;
-
-               // var reader2 = comm.ExecuteReader();
-               // List<int> ids = new List<int>();
-
-               // while(reader2.Read())
-               // {
-               //     ids.Add((int)reader2["Id"]);
-               // }
-               // reader2.Close();
-               // comm.Parameters.Clear();
+                comm.Parameters.Clear();
 
                 sql = "SELECT * from  Guest"
                     + $" WHERE Name =@Nam AND Surname =@Fam ";
                 //  +$"AND Patronymic =@Otch";
-               
+
                 comm.Parameters.Add("@Nam", SqlDbType.NVarChar, 50).Value = tbNaame.Text;
                 comm.Parameters.Add("@Fam", SqlDbType.NVarChar, 50).Value = tbFam.Text;
                 //comm.Parameters.Add("@Otch", SqlDbType.NVarChar, 50).Value = textBox1.Text;
                 int max_id = 0;
                 comm.CommandText = sql;
-                var reader = comm.ExecuteReader();
-              
-               // reader.Read();
+                reader = comm.ExecuteReader();
                 int guest_id = -1;
-                //if (reader.FieldCount>0)
-                //{
-                //    guest_id = reader.GetInt32(0);
-                //    reader.Close();
-                //}
-                if(reader.Read())
+                if (reader.Read())
                 {
-                   // reader.Read();
                     guest_id = (int)reader["Id"];
                     reader.Close();
                 }
                 else
                 {
                     reader.Close();
-                    //sql = " SELECT MAX(ID) FROM GUEST";
-                    //comm.CommandText = sql;
-                    //reader = comm.ExecuteReader();
-                    //reader.Read();
-                    // max_id = reader.GetInt32(0);
-                    //reader.Close();
+                    comm.Parameters.Clear();
+
                     sql =
                         "INSERT INTO Guest " +
-                        $"Values ('{tbNaame.Text}',  '{tbFam.Text}',' {tbOt.Text}',  '{ textBox3.Text + textBox8.Text + textBox10.Text + textBox9.Text }')";
+                        $"Values (@name,  @fam, @patr,  @docs)";
+
+                    comm.Parameters.Add("@name", SqlDbType.NVarChar, 50).Value = tbNaame.Text;
+                    comm.Parameters.Add("@fam", SqlDbType.NVarChar, 50).Value = tbFam.Text;
+                    comm.Parameters.Add("@patr", SqlDbType.NVarChar, 50).Value = tbOt.Text;
+                    comm.Parameters.Add("@docs", SqlDbType.NVarChar, 50).Value = textBox3.Text + textBox8.Text + textBox10.Text + textBox9.Text;
+
 
                     comm.CommandText = sql;
-                   int cnt_cols= comm.ExecuteNonQuery();
+                    int cnt_cols = comm.ExecuteNonQuery();
                     MessageBox.Show("Вставлено " + cnt_cols);
 
                     guest_id = max_id + 1;
                 }
 
-
-                //sql = " SELECT MAX(ID) FROM accommodation";
-                //comm.CommandText = sql;
-                //reader = comm.ExecuteReader();
-                //reader.Read();
-                //max_id = reader.GetInt32(0);
-                //reader.Close();
-
+                comm.Parameters.Clear();
 
                 sql = "INSERT INTO accommodation " +
-                     $"Values ( {guest_id}, {room}, \'{DateToString( DateTime.Now)}\'," +
-                     $" \'{DateToString(DateTime.Now.AddDays(1))}\' )";
+                     $"Values ( @guest, @room, @come, @leave)";
+
+                comm.Parameters.Add("@guest", SqlDbType.Int).Value = guest_id;
+                comm.Parameters.Add("@room", SqlDbType.Int).Value = room;
+                comm.Parameters.Add("@come", SqlDbType.DateTime).Value = com;
+                comm.Parameters.Add("@leave", SqlDbType.DateTime).Value = leave;
+
                 comm.CommandText = sql;
                 comm.ExecuteNonQuery();
 
@@ -130,14 +112,9 @@ namespace Otel
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                if (reader != null && !reader.IsClosed)
+                    reader.Close();
             }
-        }
-
-        string DateToString(DateTime dt)
-        {
-            return
-                $"{dt.Year}-{dt.Month}-{dt.Day} " +
-                $"{dt.Hour}:{dt.Minute}:{dt.Second}";
         }
 
         private async void Заселение_Load(object sender, EventArgs e)
@@ -156,8 +133,6 @@ namespace Otel
             await sqlConnection.OpenAsync();
 
             SqlDataReader sqlDataReader = null;
-            //SqlCommand sqlComm = new SqlCommand("SELECT * FROM [Worker]", sqlConnection);
-
 
             if (sqlDataReader != null)
                 sqlDataReader.Close();
@@ -168,8 +143,6 @@ namespace Otel
         List<int> room_size;
 
 
-
-
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -177,8 +150,8 @@ namespace Otel
             int size;
             try
             {
-                start = DateTime.Parse(textBox4.Text);
-                finish = DateTime.Parse(textBox5.Text);
+                start = dtCome.Value;
+                finish = dtLeave.Value;
                 size = int.Parse(textBox11.Text);
             }
             catch (Exception ex)
@@ -190,11 +163,10 @@ namespace Otel
             var comm = sqlConnection.CreateCommand();
             string SQLcode = "SELECT Appartaments.Id, size " +
                 "FROM Appartaments " +
-                "WHERE Appartaments.size >=" + size +
-               " AND Appartaments.isFree = 1";
+                "WHERE Appartaments.size >= @size AND Appartaments.isFree = 1";
 
             comm.CommandText = SQLcode;
-
+            comm.Parameters.Add("@size", SqlDbType.Int).Value = size;
             var reader = comm.ExecuteReader();
             room_ids = new List<int>();
             room_size = new List<int>();
@@ -203,7 +175,6 @@ namespace Otel
             {
                 room_ids.Add(reader.GetInt32(0));
                 room_size.Add(reader.GetInt32(1));
-
             }
 
             textBox6.Text = "";
@@ -227,9 +198,8 @@ namespace Otel
         private void zacelenie_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form form1 = Application.OpenForms[0];
-            if(!form1.Visible)
-            form1.Show();
-            // Application.Exit();
+            if (!form1.Visible)
+                form1.Show();
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)

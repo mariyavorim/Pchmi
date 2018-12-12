@@ -32,13 +32,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.tbFam = new System.Windows.Forms.TextBox();
             this.tbNaame = new System.Windows.Forms.TextBox();
@@ -59,6 +57,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.dtCome = new System.Windows.Forms.DateTimePicker();
+            this.dtLeave = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,14 +97,6 @@
             this.button1.Text = "Заселить";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(211, 447);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(639, 21);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.Text = "09.12.2018";
             // 
             // label5
             // 
@@ -155,14 +147,6 @@
             this.label8.Size = new System.Drawing.Size(39, 19);
             this.label8.TabIndex = 25;
             this.label8.Text = "Имя";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(211, 416);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(639, 21);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.Text = "08.12.2018";
             // 
             // textBox3
             // 
@@ -343,12 +327,29 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // dtCome
+            // 
+            this.dtCome.Enabled = false;
+            this.dtCome.Location = new System.Drawing.Point(227, 418);
+            this.dtCome.Name = "dtCome";
+            this.dtCome.Size = new System.Drawing.Size(179, 21);
+            this.dtCome.TabIndex = 54;
+            // 
+            // dtLeave
+            // 
+            this.dtLeave.Location = new System.Drawing.Point(227, 449);
+            this.dtLeave.Name = "dtLeave";
+            this.dtLeave.Size = new System.Drawing.Size(200, 21);
+            this.dtLeave.TabIndex = 55;
+            // 
             // zacelenie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(909, 598);
+            this.Controls.Add(this.dtLeave);
+            this.Controls.Add(this.dtCome);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -368,13 +369,11 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.tbFam);
             this.Controls.Add(this.tbNaame);
@@ -398,13 +397,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox tbFam;
         private System.Windows.Forms.TextBox tbNaame;
@@ -425,5 +422,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DateTimePicker dtCome;
+        private System.Windows.Forms.DateTimePicker dtLeave;
     }
 }
