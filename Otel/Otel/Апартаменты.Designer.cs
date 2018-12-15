@@ -33,8 +33,6 @@
             this.Вместимость = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Состояние = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Стоимость = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Статус = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Дата = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,9 +43,7 @@
             this.Id,
             this.Вместимость,
             this.Состояние,
-            this.Стоимость,
-            this.Статус,
-            this.Дата});
+            this.Стоимость});
             this.dataGridView1.Location = new System.Drawing.Point(23, 25);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(758, 634);
@@ -73,16 +69,6 @@
             this.Стоимость.HeaderText = "Стоимость";
             this.Стоимость.Name = "Стоимость";
             // 
-            // Статус
-            // 
-            this.Статус.HeaderText = "Статус";
-            this.Статус.Name = "Статус";
-            // 
-            // Дата
-            // 
-            this.Дата.HeaderText = "Дата занятости";
-            this.Дата.Name = "Дата";
-            // 
             // Апартаменты
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,7 +93,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Вместимость;
         private System.Windows.Forms.DataGridViewTextBoxColumn Состояние;
         private System.Windows.Forms.DataGridViewTextBoxColumn Стоимость;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Статус;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Дата;
     }
 }

@@ -18,7 +18,6 @@ namespace Otel
         public zacelenie()
         {
             InitializeComponent();
-            //dtCome.Value = DateTime.Now;
         }
 
         void AddGuest(string name, string fam, string patr, string docs)
@@ -33,13 +32,10 @@ namespace Otel
                 comm.Parameters.Add("@name", SqlDbType.NVarChar, 50).Value = name;
                 comm.Parameters.Add("@fam", SqlDbType.NVarChar, 50).Value = fam;
                 comm.Parameters.Add("@patr", SqlDbType.NVarChar, 50).Value = patr;
-                comm.Parameters.Add("@docs", SqlDbType.Text).Value = docs;// textBox3.Text + textBox8.Text + textBox10.Text + textBox9.Text;
+                comm.Parameters.Add("@docs", SqlDbType.Text).Value = docs;
                 comm.CommandText = sql;
                 cnt_cols = comm.ExecuteNonQuery();
             }
-            //var ;
-
-
 
             MessageBox.Show("Вставлено " + cnt_cols);
         }
@@ -92,102 +88,23 @@ namespace Otel
                 comm.ExecuteNonQuery();
             }
         }
+        void UpdateRoom(int room)
+        {
+            using (var comm = sqlConnection.CreateCommand())
+            {
+                string sql = "UPDATE Appartaments " +
+                     $"SET status= @state"+
+                     "WHERE Id = @room";
 
+                comm.Parameters.Add("@state", SqlDbType.NVarChar, 10).Value = "guest";
+                comm.Parameters.Add("@room", SqlDbType.Int).Value = room;
+
+                comm.CommandText = sql;
+                comm.ExecuteNonQuery();
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            //var comm = sqlConnection.CreateCommand();
-            //SqlDataReader reader = null;
-
-            ///*zacelenie zacelenieForm = new zacelenie();
-            //zacelenieForm.Show();
-            //this.Close();*/
-            //DateTime com, leave;
-            //int id = comboBox1.SelectedIndex;
-            //if (id == -1)
-            //{
-            //    MessageBox.Show("Не выбран номер");
-            //    return;
-            //}
-            ////  if(DateTime.TryParse(text))
-            //com = dtCome.Value;
-            //leave = dtLeave.Value;
-
-            //int room = room_ids[id];
-
-            //try
-            //{
-            //    string sql = "UPDATE Appartaments " +
-            //        "Set isFree = 0 , dateOut=null " +
-            //        "WHERE Id = " + id;
-
-
-            //    comm.CommandType = CommandType.Text;
-            //    comm.CommandText = sql;
-            //    comm.ExecuteNonQuery();
-
-
-            //    comm.Parameters.Clear();
-
-            //    sql = "SELECT * from  Guest"
-            //        + $" WHERE Name =@Nam AND Surname =@Fam ";
-            //    //  +$"AND Patronymic =@Otch";
-
-            //    comm.Parameters.Add("@Nam", SqlDbType.NVarChar, 50).Value = tbNaame.Text;
-            //    comm.Parameters.Add("@Fam", SqlDbType.NVarChar, 50).Value = tbFam.Text;
-            //    //comm.Parameters.Add("@Otch", SqlDbType.NVarChar, 50).Value = textBox1.Text;
-            //    int max_id = 0;
-            //    comm.CommandText = sql;
-            //    reader = comm.ExecuteReader();
-            //    int guest_id = -1;
-            //    if (reader.Read())
-            //    {
-            //        guest_id = (int)reader["Id"];
-            //        reader.Close();
-            //    }
-            //    else
-            //    {
-            //        reader.Close();
-            //        comm.Parameters.Clear();
-
-            //        sql =
-            //            "INSERT INTO Guest " +
-            //            $"Values (@name,  @fam, @patr,  @docs)";
-
-            //        comm.Parameters.Add("@name", SqlDbType.NVarChar, 50).Value = tbNaame.Text;
-            //        comm.Parameters.Add("@fam", SqlDbType.NVarChar, 50).Value = tbFam.Text;
-            //        comm.Parameters.Add("@patr", SqlDbType.NVarChar, 50).Value = tbOt.Text;
-            //        comm.Parameters.Add("@docs", SqlDbType.NVarChar, 50).Value = textBox3.Text + textBox8.Text + textBox10.Text + textBox9.Text;
-
-
-            //        comm.CommandText = sql;
-            //        int cnt_cols = comm.ExecuteNonQuery();
-            //        MessageBox.Show("Вставлено " + cnt_cols);
-
-            //        guest_id = max_id + 1;
-            //    }
-
-            //    comm.Parameters.Clear();
-
-            //    sql = "INSERT INTO accommodation " +
-            //         $"Values ( @guest, @room, @come, @leave)";
-
-            //    comm.Parameters.Add("@guest", SqlDbType.Int).Value = guest_id;
-            //    comm.Parameters.Add("@room", SqlDbType.Int).Value = room;
-            //    comm.Parameters.Add("@come", SqlDbType.DateTime).Value = com;
-            //    comm.Parameters.Add("@leave", SqlDbType.DateTime).Value = leave;
-
-            //    comm.CommandText = sql;
-            //    comm.ExecuteNonQuery();
-
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //    if (reader != null && !reader.IsClosed)
-            //        reader.Close();
-            //}
-
             if (room == -1)
             {
                 MessageBox.Show("Не выбран номер");
@@ -206,14 +123,12 @@ namespace Otel
             int guest = GetGuestIdInBase(name, fam, patr, docs);
 
             InsertIntoAccommodation(guest, room, DateTime.Now, leave);
+            UpdateRoom(room);
 
         }
 
-        private async void Заселение_Load(object sender, EventArgs e)
+        private void Заселение_Load(object sender, EventArgs e)
         {
-            // room_ids = new List<int>();
-            // room_size = new List<int>();
-
 
             //тут надо будет менять путь к файлу на твой
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;"
@@ -222,75 +137,20 @@ namespace Otel
 
             sqlConnection = new SqlConnection(connectionString);
 
-            await sqlConnection.OpenAsync();
-
-            //SqlDataReader sqlDataReader = null;
-
-            //if (sqlDataReader != null)
-            //    sqlDataReader.Close();
-            //sqlDataReader = null;
+             sqlConnection.Open();
         }
 
-        // List<int> room_ids;
-        //List<int> room_size;
-
-
-        //  private void button2_Click(object sender, EventArgs e)
-        // {
-
-        //DateTime start, finish;
-        //int size;
-        //try
-        //{
-        //    start = dtCome.Value;
-        //    finish = dtLeave.Value;
-        //    size = int.Parse(textBox11.Text);
-        //}
-        //catch (Exception ex)
-        //{
-        //    MessageBox.Show(ex.Message);
-        //    return;
-        //}
-
-        //var comm = sqlConnection.CreateCommand();
-        //string SQLcode = "SELECT Appartaments.Id, size " +
-        //    "FROM Appartaments " +
-        //    "WHERE Appartaments.size >= @size AND Appartaments.isFree = 1";
-
-        //comm.CommandText = SQLcode;
-        //comm.Parameters.Add("@size", SqlDbType.Int).Value = size;
-        //var reader = comm.ExecuteReader();
-        //room_ids = new List<int>();
-        //room_size = new List<int>();
-        //comboBox1.Items.Clear();
-        //while (reader.Read())
-        //{
-        //    room_ids.Add(reader.GetInt32(0));
-        //    room_size.Add(reader.GetInt32(1));
-        //}
-
-        //textBox6.Text = "";
-
-        //for (int i = 0; i < room_ids.Count; i++)
-        //{
-        //    textBox6.Text += room_ids[i] + " ";
-        //    comboBox1.Items.Add(room_ids[i]);
-        //}
-        //reader.Close();
-
-        //}
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //Form form1 = Application.OpenForms[0];
-            // form1.Show();
             this.Close();
         }
 
         private void zacelenie_FormClosing(object sender, FormClosingEventArgs e)
         {
+            sqlConnection.Close();
+            sqlConnection.Dispose();
             Form form1 = Application.OpenForms[0];
-            // if (!form1.Visible)
             form1.Show();
         }
 

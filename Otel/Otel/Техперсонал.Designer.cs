@@ -84,6 +84,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Уборка выполнена";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -99,8 +100,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 33);
             this.button2.TabIndex = 10;
-            this.button2.Text = "button2";
+            this.button2.Text = "Выбрать номера";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -151,6 +153,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Техперсонал";
             this.Text = "Техперсонал";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Техперсонал_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -22,7 +22,7 @@ namespace Otel
 
         private void Сведения_о_заселившихся_Load(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM accommodation";
+            string sql = "SELECT * FROM AccomodView";
             var comm = sqlConnection.CreateCommand();
             comm.CommandText = sql;
             var reader = comm.ExecuteReader();

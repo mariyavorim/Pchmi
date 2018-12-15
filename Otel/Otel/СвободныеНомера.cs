@@ -32,7 +32,7 @@ namespace Otel
 
             comboBox1.Items.Clear();
 
-            string sql = "SELECT * FROM GetFreeRooms3(@come, @leave, @size)";
+            string sql = "SELECT * FROM GetFreeRooms(@come, @leave, @size)";
             var comm = sqlConnection.CreateCommand();
             comm.CommandText = sql;
             comm.Parameters.Add("@come", SqlDbType.DateTime).Value = DateTime.Now;
