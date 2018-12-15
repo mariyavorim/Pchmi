@@ -39,3 +39,4 @@ C:\Users\а\Desktop\Проектирование человеко-машинно
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Апартаменты.resources
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Гости.resources
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Сведения_о_заселившихся.resources
+C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.СвободныеНомера.resources

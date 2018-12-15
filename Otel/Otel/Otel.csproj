@@ -116,6 +116,12 @@
     <Compile Include="Сведения о заселившихся.Designer.cs">
       <DependentUpon>Сведения о заселившихся.cs</DependentUpon>
     </Compile>
+    <Compile Include="СвободныеНомера.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="СвободныеНомера.Designer.cs">
+      <DependentUpon>СвободныеНомера.cs</DependentUpon>
+    </Compile>
     <Compile Include="Техперсонал.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Сведения о заселившихся.resx">
       <DependentUpon>Сведения о заселившихся.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="СвободныеНомера.resx">
+      <DependentUpon>СвободныеНомера.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Техперсонал.resx">
       <DependentUpon>Техперсонал.cs</DependentUpon>
