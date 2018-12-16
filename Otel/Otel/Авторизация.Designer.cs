@@ -66,13 +66,16 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(120, 20);
             this.login.TabIndex = 2;
+            this.login.KeyDown += new System.Windows.Forms.KeyEventHandler(this.login_KeyDown);
             // 
             // password
             // 
             this.password.Location = new System.Drawing.Point(166, 304);
             this.password.Name = "password";
+            this.password.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(120, 20);
             this.password.TabIndex = 3;
+            this.password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_KeyDown);
             // 
             // label1
             // 
@@ -99,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(431, 432);
+            this.ClientSize = new System.Drawing.Size(431, 437);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password);
@@ -114,7 +117,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.FormClosing += Авторизация_FormClosing;
 
         }
 

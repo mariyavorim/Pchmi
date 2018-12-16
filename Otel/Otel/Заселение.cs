@@ -16,9 +16,10 @@ namespace Otel
     {
         SqlConnection sqlConnection;
 
-        public zacelenie()
+        public zacelenie(SqlConnection conn)
         {
             InitializeComponent();
+            sqlConnection = conn;
         }
 
         void AddGuest(string name, string fam, string patr, string docs)
@@ -130,27 +131,7 @@ namespace Otel
 
         private void Заселение_Load(object sender, EventArgs e)
         {
-            var curDir = Directory.GetCurrentDirectory();
-            var projDir = Directory.GetParent(curDir).Parent.FullName;
-
-            SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder
-            {
-                DataSource = @"(LocalDB)\MSSQLLocalDB",
-                AttachDBFilename = projDir + @"\NewDatabase.mdf",
-                IntegratedSecurity = true
-            };
-
-            sqlConnection = new SqlConnection
-            {
-                ConnectionString = sb.ConnectionString
-            };
-
-            sqlConnection.Open();
-            if (sqlConnection.State != ConnectionState.Open)
-            {
-                MessageBox.Show("Ошибка подключения к БД. Приложение будет закрыто");
-                Application.Exit();
-            }
+            
         }
 
 

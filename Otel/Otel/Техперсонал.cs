@@ -15,31 +15,12 @@ namespace Otel
     public partial class Техперсонал : Form
     {
         SqlConnection sqlConnection;
-        public Техперсонал()
+        public Техперсонал(SqlConnection connection)
         {
+            sqlConnection = connection;
+
             InitializeComponent();
 
-            var curDir = Directory.GetCurrentDirectory();
-            var projDir = Directory.GetParent(curDir).Parent.FullName;
-
-            SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder
-            {
-                DataSource = @"(LocalDB)\MSSQLLocalDB",
-                AttachDBFilename = projDir + @"\NewDatabase.mdf",
-                IntegratedSecurity = true
-            };
-
-            sqlConnection = new SqlConnection
-            {
-                ConnectionString = sb.ConnectionString
-            };
-
-            sqlConnection.Open();
-            if(sqlConnection.State != ConnectionState.Open)
-            {
-                MessageBox.Show("Ошибка подключения к БД. Приложение будет закрыто");
-                Application.Exit();
-            }
             CheckNumbers();
         }
 
@@ -69,8 +50,6 @@ namespace Otel
 
         private void Техперсонал_FormClosing(object sender, FormClosingEventArgs e)
         {
-            sqlConnection.Close();
-            sqlConnection.Dispose();
             Form form1 = Application.OpenForms[0];
             form1.Show();
         }
@@ -103,10 +82,6 @@ namespace Otel
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int size = 0;
-
-
-
             CheckNumbers();
             GetRooms();
         }
