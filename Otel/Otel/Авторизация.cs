@@ -60,6 +60,7 @@ namespace Otel
                 {
                     if (reader.Read())
                         position = (string)reader["position"];
+                    reader.Close();
                 }
             }
             return position;
