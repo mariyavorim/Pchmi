@@ -47,7 +47,6 @@ C:\Users\а\Desktop\Проектирование человеко-машинно
 C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Апартаменты.resources
 C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Гости.resources
 C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.zacelenie.resources
-C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.bron.resources
 C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Сведения_о_заселившихся.resources
 C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.СвободныеНомера.resources
 C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Техперсонал.resources
