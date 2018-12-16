@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Otel
 {
@@ -18,14 +19,23 @@ namespace Otel
         {
             InitializeComponent();
 
-            //тут надо будет менять путь к файлу на твой
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;"
-+ @"AttachDbFilename=C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\NewDatabase.mdf;" +
-@"Integrated Security=True";
+            var curDir = Directory.GetCurrentDirectory();
+            var projDir = Directory.GetParent(curDir).Parent.FullName;
 
-            sqlConnection = new SqlConnection(connectionString);
+            SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder
+            {
+                DataSource = @"(LocalDB)\MSSQLLocalDB",
+                AttachDBFilename = projDir + @"\NewDatabase.mdf",
+                IntegratedSecurity = true
+            };
 
-             sqlConnection.Open();
+            sqlConnection = new SqlConnection
+            {
+                ConnectionString = sb.ConnectionString
+            };
+
+            sqlConnection.Open();
+
             CheckNumbers();
         }
 

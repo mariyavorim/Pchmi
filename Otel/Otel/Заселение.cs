@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Otel
 {
@@ -93,7 +94,7 @@ namespace Otel
             using (var comm = sqlConnection.CreateCommand())
             {
                 string sql = "UPDATE Appartaments " +
-                     $"SET status= @state"+
+                     $"SET status= @state " +
                      "WHERE Id = @room";
 
                 comm.Parameters.Add("@state", SqlDbType.NVarChar, 10).Value = "guest";
@@ -129,15 +130,22 @@ namespace Otel
 
         private void Заселение_Load(object sender, EventArgs e)
         {
+            var curDir = Directory.GetCurrentDirectory();
+            var projDir = Directory.GetParent(curDir).Parent.FullName;
 
-            //тут надо будет менять путь к файлу на твой
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;"
-+ @"AttachDbFilename=C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\NewDatabase.mdf;" +
-@"Integrated Security=True";
+            SqlConnectionStringBuilder sb = new SqlConnectionStringBuilder
+            {
+                DataSource = @"(LocalDB)\MSSQLLocalDB",
+                AttachDBFilename = projDir + @"\NewDatabase.mdf",
+                IntegratedSecurity = true
+            };
 
-            sqlConnection = new SqlConnection(connectionString);
+            sqlConnection = new SqlConnection
+            {
+                ConnectionString = sb.ConnectionString
+            };
 
-             sqlConnection.Open();
+            sqlConnection.Open();
         }
 
 
@@ -148,8 +156,12 @@ namespace Otel
 
         private void zacelenie_FormClosing(object sender, FormClosingEventArgs e)
         {
-            sqlConnection.Close();
-            sqlConnection.Dispose();
+            if (sqlConnection != null)
+            {
+                sqlConnection.Close();
+                sqlConnection.Dispose();
+            }
+
             Form form1 = Application.OpenForms[0];
             form1.Show();
         }

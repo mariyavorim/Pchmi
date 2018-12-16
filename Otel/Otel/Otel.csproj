@@ -61,17 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client_database.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Client_database.Designer.cs">
-      <DependentUpon>Client_database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Авторизация.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,12 +69,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="room_database.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="room_database.Designer.cs">
-      <DependentUpon>room_database.cs</DependentUpon>
-    </Compile>
     <Compile Include="Апартаменты.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,9 +111,6 @@
     <Compile Include="Техперсонал.Designer.cs">
       <DependentUpon>Техперсонал.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Client_database.resx">
-      <DependentUpon>Client_database.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Авторизация.resx">
       <DependentUpon>Авторизация.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,9 +123,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="room_database.resx">
-      <DependentUpon>room_database.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Апартаменты.resx">
       <DependentUpon>Апартаменты.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,17 +144,6 @@
     <EmbeddedResource Include="Техперсонал.resx">
       <DependentUpon>Техперсонал.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DatabaseDataSet.xsc">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseDataSet.xss">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -192,13 +158,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
     <Content Include="NewDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
