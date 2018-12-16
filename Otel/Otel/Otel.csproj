@@ -87,12 +87,6 @@
     <Compile Include="Заселение.Designer.cs">
       <DependentUpon>Заселение.cs</DependentUpon>
     </Compile>
-    <Compile Include="Окно администратора.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Окно администратора.Designer.cs">
-      <DependentUpon>Окно администратора.cs</DependentUpon>
-    </Compile>
     <Compile Include="Сведения о заселившихся.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,9 +125,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Заселение.resx">
       <DependentUpon>Заселение.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Окно администратора.resx">
-      <DependentUpon>Окно администратора.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Сведения о заселившихся.resx">
       <DependentUpon>Сведения о заселившихся.cs</DependentUpon>
