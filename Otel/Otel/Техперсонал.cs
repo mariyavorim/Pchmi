@@ -35,7 +35,11 @@ namespace Otel
             };
 
             sqlConnection.Open();
-
+            if(sqlConnection.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Ошибка подключения к БД. Приложение будет закрыто");
+                Application.Exit();
+            }
             CheckNumbers();
         }
 
@@ -71,15 +75,9 @@ namespace Otel
             form1.Show();
         }
 
-
-
-        private void button2_Click(object sender, EventArgs e)
+        void GetRooms()
         {
-            int size = 0;
-
-
             comboBox1.Items.Clear();
-
             string sql = "SELECT * FROM [Appartaments] WHERE status = @state";
             using (var comm = sqlConnection.CreateCommand())
             {
@@ -103,6 +101,16 @@ namespace Otel
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int size = 0;
+
+
+
+            CheckNumbers();
+            GetRooms();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if(comboBox1.SelectedIndex==-1)
@@ -124,7 +132,8 @@ namespace Otel
                 comm.CommandText = sql;
                 comm.ExecuteNonQuery();
             }
-
+            CheckNumbers();
+            GetRooms();
         }
     }
 }

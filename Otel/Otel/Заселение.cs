@@ -146,6 +146,11 @@ namespace Otel
             };
 
             sqlConnection.Open();
+            if (sqlConnection.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Ошибка подключения к БД. Приложение будет закрыто");
+                Application.Exit();
+            }
         }
 
 

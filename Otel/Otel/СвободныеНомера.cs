@@ -23,7 +23,8 @@ namespace Otel
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        void GetRoomsFromDB()
         {
             int size = 0;
             if (int.TryParse(tbSize.Text, out size)) ;
@@ -53,7 +54,12 @@ namespace Otel
             reader.Close();
         }
 
-       public int selectedRoom = -1;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GetRoomsFromDB();
+        }
+
+        public int selectedRoom = -1;
         public DateTime leave;
         private void button2_Click(object sender, EventArgs e)
         {
