@@ -48,7 +48,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(159, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 111);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -78,7 +78,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(658, 351);
+            this.button1.Location = new System.Drawing.Point(501, 380);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 50);
             this.button1.TabIndex = 8;
@@ -114,7 +114,7 @@
             this.state});
             this.dataGridView1.Location = new System.Drawing.Point(33, 123);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(588, 239);
+            this.dataGridView1.Size = new System.Drawing.Size(440, 239);
             this.dataGridView1.TabIndex = 9;
             // 
             // Room
@@ -129,12 +129,12 @@
             // 
             // cost
             // 
-            this.cost.HeaderText = "цена";
+            this.cost.HeaderText = "Статус";
             this.cost.Name = "cost";
             // 
             // state
             // 
-            this.state.HeaderText = "статус";
+            this.state.HeaderText = "Цена";
             this.state.Name = "state";
             // 
             // Техперсонал
@@ -142,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(779, 419);
+            this.ClientSize = new System.Drawing.Size(779, 452);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
