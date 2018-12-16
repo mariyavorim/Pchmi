@@ -249,29 +249,33 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(53, 401);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 15);
+            this.label4.Size = new System.Drawing.Size(149, 19);
             this.label4.TabIndex = 54;
             this.label4.Text = "Выбранный номер";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(250, 401);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 15);
+            this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 55;
             this.label5.Text = "Не выбран";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(358, 401);
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(356, 419);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 42);
+            this.button2.Size = new System.Drawing.Size(165, 32);
             this.button2.TabIndex = 56;
             this.button2.Text = "Выбрать номер";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // dateTimePicker1
@@ -284,9 +288,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(53, 428);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 15);
+            this.label7.Size = new System.Drawing.Size(29, 16);
             this.label7.TabIndex = 58;
             this.label7.Text = "до:";
             // 
@@ -295,7 +300,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(909, 598);
+            this.ClientSize = new System.Drawing.Size(909, 593);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button2);

@@ -40,3 +40,26 @@ C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Апарт
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Гости.resources
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.Сведения_о_заселившихся.resources
 C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\obj\Debug\Otel.СвободныеНомера.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\bin\Debug\Database.mdf
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\bin\Debug\Database_log.ldf
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\bin\Debug\NewDatabase.mdf
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\bin\Debug\NewDatabase_log.ldf
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\bin\Debug\Otel.exe.config
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\bin\Debug\Otel.exe
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\bin\Debug\Otel.pdb
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.csprojResolveAssemblyReference.cache
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Client_database.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Авторизация.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Properties.Resources.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.room_database.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Апартаменты.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Гости.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.zacelenie.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.bron.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Сведения_о_заселившихся.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.СвободныеНомера.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.Техперсонал.resources
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.csproj.GenerateResource.Cache
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.csproj.CoreCompileInputs.cache
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.exe
+C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\obj\Debug\Otel.pdb

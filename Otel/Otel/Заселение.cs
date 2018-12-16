@@ -132,7 +132,7 @@ namespace Otel
 
             //тут надо будет менять путь к файлу на твой
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;"
-+ @"AttachDbFilename=C:\Users\Михаил\Desktop\ПЧМИ\Pchmi\Otel\Otel\NewDatabase.mdf;" +
++ @"AttachDbFilename=C:\Users\а\Desktop\Проектирование человеко-машинного интерфейса\Итог\Pchmi\Otel\Otel\NewDatabase.mdf;" +
 @"Integrated Security=True";
 
             sqlConnection = new SqlConnection(connectionString);
