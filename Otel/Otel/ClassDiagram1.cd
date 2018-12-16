@@ -1,2 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Otel.Program" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Otel.Авторизация" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAGAAABAAgACAAAACAAAIEAAAAEAAQgBAEAQ=</HashCode>
+      <FileName>Авторизация.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Otel.Апартаменты" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAEAAACAAAAAAAACgAAACAAgAEAAAAAABAAAAAAA=</HashCode>
+      <FileName>Апартаменты.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Otel.Гости" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAGAAAACAAgAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Гости.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Otel.zacelenie" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UBEAIAAAASAEABgCEACAAABSAMB4EBABENAMQABgIIA=</HashCode>
+      <FileName>Заселение.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Otel.Сведения_о_заселившихся" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAACACAAgAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Сведения о заселившихся.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Otel.СвободныеНомера" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiABABAQAJCAAAACAIgYEAAFAGIAAAAAAAA=</HashCode>
+      <FileName>СвободныеНомера.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Otel.Техперсонал">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAIAQAACAAABAQAJCAAAACAAgYEAAEAGAAAABAAAA=</HashCode>
+      <FileName>Техперсонал.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Otel.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Otel.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
