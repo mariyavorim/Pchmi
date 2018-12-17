@@ -142,12 +142,6 @@ namespace Otel
 
         private void zacelenie_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (sqlConnection != null)
-            {
-                sqlConnection.Close();
-                sqlConnection.Dispose();
-            }
-
             Form form1 = Application.OpenForms[0];
             form1.Show();
         }

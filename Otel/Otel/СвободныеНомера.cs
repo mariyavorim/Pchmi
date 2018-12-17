@@ -30,15 +30,27 @@ namespace Otel
             if (int.TryParse(tbSize.Text, out size)) ;
             DateTime leave = DateTime.Now.AddDays(1);
             leave = dtLeave.Value;
-
+ var comm = sqlConnection.CreateCommand();
             comboBox1.Items.Clear();
-
-            string sql = "SELECT * FROM GetFreeRooms(@come, @leave, @size)";
-            var comm = sqlConnection.CreateCommand();
+            if(size!=0)
+            {
+ string sql = "SELECT * FROM GetFreeRooms(@come, @leave, @size)"
+                    + "WHERE status = @State";//
+           
             comm.CommandText = sql;
             comm.Parameters.Add("@come", SqlDbType.DateTime).Value = DateTime.Now;
             comm.Parameters.Add("@leave", SqlDbType.DateTime).Value = leave;
             comm.Parameters.Add("@size", SqlDbType.Int).Value = size;
+            comm.Parameters.Add("@State", SqlDbType.NVarChar, 50).Value = "free";//
+            }
+            else
+            {
+                string sql = "SELECT[Appartaments].Id as room, size, cost, [status]" +
+                   "FROM [Appartaments] " +
+                   "WHERE status = @State";
+                comm.CommandText = sql;
+                comm.Parameters.Add("@State", SqlDbType.NVarChar, 50).Value = "free";//
+            }
 
             var reader = comm.ExecuteReader();
             //dataGridView1.ColumnCount = reader.FieldCount;
